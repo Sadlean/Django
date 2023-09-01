@@ -1,0 +1,40 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+    Восстановление пароля
+{% endblock %}
+
+{% block content %}
+    <h1>Восстановление пароля</h1>
+    <form method="post" class="form-register auth">
+        {% csrf_token %}                 <!--csrf_token служит для того, чтобы мы могли получать данные из форм-->
+        {{ form.as_p }}
+        <button class="btn btn-danger" type="submit">Запросить новый пароль</button>
+    </form>
+{% endblock %}
+
+{% block aside_block %}
+
+<h4 class="mt-2">Интересные статьи</h4>
+<img src="https://itproger.com/img/news/x1692455642.jpg.pagespeed.ic.F3YNByeTRl.webp" class="img-thumbnail">
+<p>
+    Уже не первый год слышу много положительных отзывов про движок Godot. Пришло Время узнать больше
+    об этом движке и выяснить почему он столь популярен
+</p>
+<a href="https://itproger.com/news/chto-ispolzuyut-dlya-napisaniya-koda-v-nasa-i-spacex" target="_blank">
+    <button class="btn btn-warning">Посмотреть</button>
+</a>
+
+<img src="https://itproger.com/img/news/x1691683146.jpg.pagespeed.ic.AbXmb-deyw.webp" class="img-thumbnail mt-4">
+<p>
+    Сегодня достаточно много job-сайтов для поиска работы. Но, к сожалению, не все они подходят для
+    программистов. Кроме того, некоторые выставляют мало перспективные вакансии с низкими ставками.
+</p>
+<a href="https://itproger.com/news/luchshie-dzhob-sayti-gde-stoit-razmestit-rezyume-programmistu" target="_blank">
+    <button class="btn btn-warning">Посмотреть</button>
+</a>
+
+{% endblock %}
+
+
+
